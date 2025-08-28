@@ -39,4 +39,235 @@
       position:sticky;top:0;z-index:50; backdrop-filter: blur(10px);
       background: rgba(255,255,255,0.6); border-bottom:1px solid rgba(31,36,48,0.06);
     }
-    nav{display:flex; align-items:center; justify-content:space-between; gap:16px
+    nav{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0}
+    .brand{font-weight:800; letter-spacing:.5px}
+    .nav-links{display:flex; gap:18px}
+    .chip{padding:8px 14px; border-radius:999px; background: var(--card); box-shadow: var(--shadow)}
+
+    .hero{padding:72px 0 32px}
+    .hero h1{font-size: clamp(28px, 6vw, 56px); line-height:1.05; margin:0}
+    .hero p{font-size: clamp(16px, 2.5vw, 20px); opacity:.9}
+
+    .badge-row{display:flex; flex-wrap:wrap; gap:12px; margin-top:18px}
+    .badge{background:linear-gradient(135deg, var(--pink), var(--rose)); border:1px solid rgba(31,36,48,.06); padding:8px 14px; border-radius:999px; box-shadow: var(--shadow)}
+
+    section{padding:54px 0}
+    h2{font-size: clamp(22px, 4vw, 36px); margin:0 0 14px}
+    .card{background:var(--card); border:1px solid rgba(31,36,48,0.08); border-radius: var(--radius); box-shadow: var(--shadow)}
+
+    .about-grid{display:grid; grid-template-columns: 1.1fr .9fr; gap:24px}
+    .about-card{padding:26px}
+    .stats{display:grid; grid-template-columns: repeat(3,1fr); gap:12px; margin-top:14px}
+    .stat-box{padding:16px; border-radius:14px; background:linear-gradient(135deg, var(--sky), var(--mint)); color:#0c2430; text-align:center; border:1px solid rgba(31,36,48,0.06)}
+
+    .pill{display:inline-block; padding:8px 12px; border-radius:999px; background:linear-gradient(135deg, var(--butter), #fff8e8); border:1px solid rgba(31,36,48,.06); margin:6px 6px 0 0}
+
+    .course{display:grid; grid-template-columns: 1fr 1fr; gap:24px}
+    .list{padding:22px}
+    .list h3{margin:6px 0 10px}
+    ul{margin:0; padding-left:18px}
+
+    .grid{display:grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap:18px}
+    .project{padding:18px; display:flex; flex-direction:column; gap:12px; min-height:200px}
+    .project h4{margin:0}
+    .tag{font-size:12px; background:linear-gradient(135deg, var(--mint), #ffffff); padding:6px 10px; border-radius:999px; border:1px solid rgba(31,36,48,0.06); align-self:flex-start}
+
+    .footer{padding:40px 0 80px; text-align:center; opacity:.8}
+
+    /* Responsive */
+    @media (max-width: 950px){
+      .about-grid, .course{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 640px){
+      .grid{grid-template-columns:1fr}
+      nav .nav-links{display:none}
+    }
+
+    /* Fancy separators */
+    .divider{height:2px; background:linear-gradient(90deg, transparent, rgba(31,36,48,.08), transparent); margin:24px 0}
+
+    /* Buttons */
+    .btn{
+      display:inline-block; padding:10px 16px; border-radius:12px; border:1px solid rgba(31,36,48,.08);
+      background:linear-gradient(135deg, #fff, var(--offwhite)); box-shadow: var(--shadow);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .btn:hover{transform: translateY(-1px); box-shadow: 0 12px 30px rgba(31,36,48,.12)}
+
+    /* Avatar */
+    .avatar{width:120px;height:120px;border-radius:999px;object-fit:cover;float:right;margin:6px 0 10px 18px;border:3px solid rgba(255,255,255,.8);box-shadow:0 12px 30px rgba(31,36,48,.15)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">Generative AI • Portfolio</div>
+        <div class="nav-links">
+          <a class="chip" href="#about">About Me</a>
+          <a class="chip" href="#course">About the Course</a>
+          <a class="chip" href="#submissions">Weekly Submissions</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="card" style="padding:28px; background:linear-gradient(135deg, rgba(255,204,225,.6), rgba(198,226,231,.6));">
+          <h1>Generative AI for Work & Research</h1>
+          <p>
+            A pastel‑themed, elegantly simple portfolio showcasing my journey in an 8‑week cohort course. Expect gradients, glassy cards, and clear structure—no frameworks, just thoughtful HTML, CSS, and a dash of JS.
+          </p>
+          <div class="badge-row">
+            <span class="badge">Pastel UI</span>
+            <span class="badge">No‑Code + AI</span>
+            <span class="badge">Data • Research • Automation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-grid">
+        <article class="card about-card">
+          <h2>About Me</h2>
+          <p>
+            Public health professional transitioning into data‑driven research workflows. 6+ years of experience in monitoring & evaluation and health program implementation across NGOs and international organizations. Currently pursuing an MSc in Epidemiology, with a focus on mental health among migrant workers. Skilled in research design, data analysis, and building practical tools for decision‑making.
+          </p>
+          <div class="divider"></div>
+          <div class="stats">
+            <div class="stat-box"><strong>6+ yrs</strong><br/>Health programs & M&amp;E</div>
+            <div class="stat-box"><strong>MSc</strong><br/>Epidemiology (in progress)</div>
+            <div class="stat-box"><strong>NGO/UN</strong><br/>WHO, PSI, The Union</div>
+          </div>
+          <p style="margin-top:16px">
+            Highlights: led surveillance & reporting systems, coordinated multi‑site health projects, developed SOPs and training materials, and supported research & data quality assurance.
+          </p>
+          <div>
+            <span class="pill">Monitoring & Evaluation</span>
+            <span class="pill">Research Methods</span>
+            <span class="pill">Data Analysis</span>
+            <span class="pill">Program Design</span>
+          </div>
+        </article>
+        <aside class="card about-card" aria-label="Color palette">
+          <h3 style="margin-top:0">Design System – Pastel Energy</h3>
+          <p>Core palette used throughout the site:</p>
+          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:12px 0">
+            <div style="background:var(--pink); height:54px; border-radius:12px; border:1px solid rgba(31,36,48,.08)"></div>
+            <div style="background:var(--mint); height:54px; border-radius:12px; border:1px solid rgba(31,36,48,.08)"></div>
+            <div style="background:var(--sky); height:54px; border-radius:12px; border:1px solid rgba(31,36,48,.08)"></div>
+            <div style="background:var(--butter); height:54px; border-radius:12px; border:1px solid rgba(31,36,48,.08)"></div>
+            <div style="background:var(--rose); height:54px; border-radius:12px; border:1px solid rgba(31,36,48,.08)"></div>
+            <div style="background:var(--offwhite); height:54px; border-radius:12px; border:1px solid rgba(31,36,48,.08)"></div>
+          </div>
+          <code style="font-size:13px">#FFCCE1, #CDE5D9, #C6E2E7, #F2EBCC, #F7DDE8, #F2F1ED</code>
+        </aside>
+      </div>
+    </section>
+
+    <section id="course">
+      <div class="container course">
+        <div class="card list">
+          <h2>About the Course</h2>
+          <p>
+            An 8‑week live cohort that blends no‑code AI tools with practical, research‑ready workflows. Features weekly workshops, help sessions, a supportive community, personalized feedback, and a capstone showcase.
+          </p>
+          <ul>
+            <li>Weekly live workshops & help sessions</li>
+            <li>Automations, dashboards, custom GPTs & chatbots</li>
+            <li>Structured text & research tooling (Markdown, HTML)</li>
+            <li>Automated reports, spreadsheets, and visualizations</li>
+            <li>Final project coaching & a shareable certificate</li>
+          </ul>
+          <div class="divider"></div>
+          <p><strong>Grading:</strong> Quizzes (15%), Workshops (35%), Participation (10%), Final Project (40%) • Passing: 80%</p>
+        </div>
+        <div class="card list">
+          <h3>Module Snapshot</h3>
+          <ul>
+            <li><strong>Websites, Documents & Presentations</strong> – LLM basics; generate structured outputs; build simple research sites.</li>
+            <li><strong>AI‑Automated Data Analysis</strong> – Code Interpreter/Julius; transform datasets; automated reporting & visuals.</li>
+            <li><strong>GenAI for Research & Text Analysis</strong> – Literature search, classification, sentiment, knowledge maps.</li>
+            <li><strong>Custom GPTs & Chatbots</strong> – RAG concepts; Botpress; research assistants with knowledge bases.</li>
+            <li><strong>AI for Task Automation</strong> – Agents, email flows, browser control for repetitive tasks.</li>
+            <li><strong>Communication & Outreach</strong> – Summaries, figures, video abstracts, visualization prompts.</li>
+            <li><strong>Capstone & Showcase</strong> – Project development, peer feedback, public presentation.</li>
+          </ul>
+          <a class="btn" href="https://thegraphcourses.org" target="_blank" rel="noopener">Course Website ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="submissions">
+      <div class="container">
+        <h2>My Weekly Submissions</h2>
+        <p>Links will be added as projects are finalized. One card per workshop/week.</p>
+        <div class="grid">
+          <article class="card project">
+            <span class="tag">Workshop 1</span>
+            <h4>Research Website Starter</h4>
+            <p>Set up a simple research site and generated structured Markdown/HTML documents with AI assistance.</p>
+            <div style="margin-top:auto"><a class="btn" href="#" aria-disabled="true">Coming soon</a></div>
+          </article>
+
+          <article class="card project" style="background:linear-gradient(135deg, rgba(205,229,217,.7), rgba(242,235,204,.7));">
+            <span class="tag">Workshop 2</span>
+            <h4>Automated Data Analysis</h4>
+            <p>Analyzed Gapminder data to explore relationships between two global indicators using AI tools.</p>
+            <div style="margin-top:auto">
+              <a class="btn" href="https://github.com/khinoomon/graph-ai-portfolio-/blob/main/Week2report_khin.pdf" target="_blank" rel="noopener">View Report ↗</a>
+            </div>
+          </article>
+
+          <article class="card project">
+            <span class="tag">Workshop 3</span>
+            <h4>GenAI for Text Analysis</h4>
+            <p>Pipeline for literature triage, sentiment, and topic mapping with AI‑assisted synthesis.</p>
+            <div style="margin-top:auto"><a class="btn" href="#">Coming soon</a></div>
+          </article>
+
+          <article class="card project">
+            <span class="tag">Workshop 4</span>
+            <h4>Custom GPTs & Chatbots</h4>
+            <p>Prototype of a domain‑aware assistant using retrieval augmentation and a curated knowledge base.</p>
+            <div style="margin-top:auto"><a class="btn" href="#">Coming soon</a></div>
+          </article>
+
+          <article class="card project">
+            <span class="tag">Workshop 5</span>
+            <h4>Task Automations</h4>
+            <p>Agent‑style flows to monitor sources and compile periodic research digests.</p>
+            <div style="margin-top:auto"><a class="btn" href="#">Coming soon</a></div>
+          </article>
+
+          <article class="card project">
+            <span class="tag">Capstone</span>
+            <h4>Final Project</h4>
+            <p>End‑to‑end applied AI solution (TBA) with automated reporting and outreach assets.</p>
+            <div style="margin-top:auto"><a class="btn" href="#">Coming soon</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="container">
+        <div class="divider"></div>
+        <p>© <span id="year"></span> • Generative AI Portfolio • Built with vanilla HTML/CSS • Pastel gradient theme</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Smooth‑scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{const id=a.getAttribute('href'); if(id.length>1){e.preventDefault(); document.querySelector(id).scrollIntoView({behavior:'smooth'})}})
+    })
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
