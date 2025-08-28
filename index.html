@@ -6,7 +6,6 @@
   <title>Generative AI for Work & Research – Portfolio</title>
   <style>
     :root{
-      /* Pastel palette from the image */
       --pink:#FFCCE1;
       --offwhite:#F2F1ED;
       --mint:#CDE5D9;
@@ -14,19 +13,16 @@
       --sky:#C6E2E7;
       --rose:#F7DDE8;
       --ink:#1f2430;
-      --ink-2:#2a2f3b;
       --card: rgba(255,255,255,0.7);
-      --shadow: 0 10px 30px rgba(31,36,48,0.08);
+      --shadow: 0 10px 30px rgba(31,36,48,0.10);
       --radius: 20px;
     }
-    /* Global */
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; color:var(--ink)}
+    html,body{margin:0;padding:0;font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:var(--ink)}
     a{color:#4a2ea8;text-decoration:none}
     a:hover{text-decoration:underline}
     .container{width:min(1100px, 90vw); margin:0 auto}
 
-    /* Background gradient layers */
     body{
       background: radial-gradient(1200px 800px at -10% -10%, var(--rose) 0%, transparent 55%),
                   radial-gradient(900px 700px at 110% 0%, var(--sky) 0%, transparent 60%),
@@ -35,28 +31,21 @@
       background-attachment: fixed;
     }
 
-    header{
-      position:sticky;top:0;z-index:50; backdrop-filter: blur(10px);
-      background: rgba(255,255,255,0.6); border-bottom:1px solid rgba(31,36,48,0.06);
-    }
+    header{position:sticky;top:0;z-index:50; backdrop-filter: blur(10px); background: rgba(255,255,255,0.6); border-bottom:1px solid rgba(31,36,48,0.06)}
     nav{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0}
     .brand{font-weight:800; letter-spacing:.5px}
     .nav-links{display:flex; gap:18px}
     .chip{padding:8px 14px; border-radius:999px; background: var(--card); box-shadow: var(--shadow)}
 
     .hero{padding:72px 0 32px}
-    .hero h1{font-size: clamp(28px, 6vw, 56px); line-height:1.05; margin:0}
+    .hero h1{font-size: clamp(28px, 6vw, 42px); line-height:1.2; margin:0}
     .hero p{font-size: clamp(16px, 2.5vw, 20px); opacity:.9}
-
-    .badge-row{display:flex; flex-wrap:wrap; gap:12px; margin-top:18px}
-    .badge{background:linear-gradient(135deg, var(--pink), var(--rose)); border:1px solid rgba(31,36,48,.06); padding:8px 14px; border-radius:999px; box-shadow: var(--shadow)}
+    .hero .avatar{width:108px;height:108px;border-radius:9999px;object-fit:cover;border:4px solid rgba(255,255,255,.9);box-shadow: var(--shadow);display:block;margin-bottom:12px}
 
     section{padding:54px 0}
     h2{font-size: clamp(22px, 4vw, 36px); margin:0 0 14px}
     .card{background:var(--card); border:1px solid rgba(31,36,48,0.08); border-radius: var(--radius); box-shadow: var(--shadow)}
 
-    .about-grid{display:grid; grid-template-columns: 1.1fr .9fr; gap:24px}
-    .about-card{padding:26px}
     .stats{display:grid; grid-template-columns: repeat(3,1fr); gap:12px; margin-top:14px}
     .stat-box{padding:16px; border-radius:14px; background:linear-gradient(135deg, var(--sky), var(--mint)); color:#0c2430; text-align:center; border:1px solid rgba(31,36,48,0.06)}
 
@@ -74,9 +63,8 @@
 
     .footer{padding:40px 0 80px; text-align:center; opacity:.8}
 
-    /* Responsive */
     @media (max-width: 950px){
-      .about-grid, .course{grid-template-columns:1fr}
+      .course{grid-template-columns:1fr}
       .grid{grid-template-columns:1fr 1fr}
     }
     @media (max-width: 640px){
@@ -84,19 +72,10 @@
       nav .nav-links{display:none}
     }
 
-    /* Fancy separators */
     .divider{height:2px; background:linear-gradient(90deg, transparent, rgba(31,36,48,.08), transparent); margin:24px 0}
 
-    /* Buttons */
-    .btn{
-      display:inline-block; padding:10px 16px; border-radius:12px; border:1px solid rgba(31,36,48,.08);
-      background:linear-gradient(135deg, #fff, var(--offwhite)); box-shadow: var(--shadow);
-      transition: transform .15s ease, box-shadow .15s ease;
-    }
+    .btn{display:inline-block; padding:10px 16px; border-radius:12px; border:1px solid rgba(31,36,48,.08); background:linear-gradient(135deg, #fff, var(--offwhite)); box-shadow: var(--shadow); transition: transform .15s ease, box-shadow .15s ease}
     .btn:hover{transform: translateY(-1px); box-shadow: 0 12px 30px rgba(31,36,48,.12)}
-
-    /* Avatar */
-    .avatar{width:120px;height:120px;border-radius:999px;object-fit:cover;float:right;margin:6px 0 10px 18px;border:3px solid rgba(255,255,255,.85);box-shadow:0 12px 30px rgba(31,36,48,.15)}
   </style>
 </head>
 <body>
@@ -117,45 +96,23 @@
     <section class="hero">
       <div class="container">
         <div class="card" style="padding:28px; background:linear-gradient(135deg, rgba(255,204,225,.6), rgba(198,226,231,.6));">
-          <div style="display:flex; gap:22px; align-items:center; flex-wrap:wrap">
-            <div style="position:relative; width:110px; heigh
-
-    <section id="about">
-      <div class="container about-grid">
-        <article class="card about-card">
-          <h2>About Me</h2>
+          <img class="avatar" src="https://raw.githubusercontent.com/khinoomon/graph-ai-portfolio-/main/khin%20headshot.JPG" alt="Portrait of Khin" loading="lazy"/>
+          <h1>About Me</h1>
           <p>
             Public health professional transitioning into data‑driven research workflows. 6+ years of experience in monitoring & evaluation and health program implementation across NGOs and international organizations. Currently pursuing an MSc in Epidemiology, with a focus on mental health among migrant workers. Skilled in research design, data analysis, and building practical tools for decision‑making.
           </p>
-          <div class="divider"></div>
           <div class="stats">
             <div class="stat-box"><strong>6+ yrs</strong><br/>Health programs & M&amp;E</div>
             <div class="stat-box"><strong>MSc</strong><br/>Epidemiology (in progress)</div>
             <div class="stat-box"><strong>NGO/UN</strong><br/>WHO, PSI, The Union</div>
           </div>
-          <p style="margin-top:16px">
-            Highlights: led surveillance & reporting systems, coordinated multi‑site health projects, developed SOPs and training materials, and supported research & data quality assurance.
-          </p>
-          <div>
+          <div style="margin-top:16px">
             <span class="pill">Monitoring & Evaluation</span>
             <span class="pill">Research Methods</span>
             <span class="pill">Data Analysis</span>
             <span class="pill">Program Design</span>
           </div>
-        </article>
-        <aside class="card about-card" aria-label="Color palette">
-          <h3 style="margin-top:0">Design System – Pastel Energy</h3>
-          <p>Core palette used throughout the site:</p>
-          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:12px 0">
-            <div style="background:var(--pink); height:54px; border-radius:12px; border:1px solid rgba(31,36,48,.08)"></div>
-            <div style="background:var(--mint); height:54px; border-radius:12px; border:1px solid rgba(31,36,48,.08)"></div>
-            <div style="background:var(--sky); height:54px; border-radius:12px; border:1px solid rgba(31,36,48,.08)"></div>
-            <div style="background:var(--butter); height:54px; border-radius:12px; border:1px solid rgba(31,36,48,.08)"></div>
-            <div style="background:var(--rose); height:54px; border-radius:12px; border:1px solid rgba(31,36,48,.08)"></div>
-            <div style="background:var(--offwhite); height:54px; border-radius:12px; border:1px solid rgba(31,36,48,.08)"></div>
-          </div>
-          <code style="font-size:13px">#FFCCE1, #CDE5D9, #C6E2E7, #F2EBCC, #F7DDE8, #F2F1ED</code>
-        </aside>
+        </div>
       </div>
     </section>
 
@@ -253,7 +210,6 @@
   </main>
 
   <script>
-    // Smooth‑scroll for internal links
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener('click', e=>{const id=a.getAttribute('href'); if(id.length>1){e.preventDefault(); document.querySelector(id).scrollIntoView({behavior:'smooth'})}})
     })
