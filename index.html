@@ -1,127 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Khin Oo Mon - Generative AI Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generative AI for Work & Research – Portfolio</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #eef2f3, #8e9eab);
-      color: #333;
-      line-height: 1.6;
+    :root{
+      /* Pastel palette from the image */
+      --pink:#FFCCE1;
+      --offwhite:#F2F1ED;
+      --mint:#CDE5D9;
+      --butter:#F2EBCC;
+      --sky:#C6E2E7;
+      --rose:#F7DDE8;
+      --ink:#1f2430;
+      --ink-2:#2a2f3b;
+      --card: rgba(255,255,255,0.7);
+      --shadow: 0 10px 30px rgba(31,36,48,0.08);
+      --radius: 20px;
     }
-    header {
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      color: white;
-      text-align: center;
-      padding: 3rem 1rem;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-    }
-    section {
-      padding: 3rem 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      color: #444;
-      border-bottom: 2px solid #667eea;
-      display: inline-block;
-      margin-bottom: 1rem;
-      padding-bottom: 0.3rem;
-    }
-    .card {
-      background: white;
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    a {
-      color: #667eea;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Khin Oo Mon</h1>
-    <p>Generative AI for Work & Research Portfolio</p>
-  </header>
+    /* Global */
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; color:var(--ink)}
+    a{color:#4a2ea8;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{width:min(1100px, 90vw); margin:0 auto}
 
-  <section id="about-me">
-    <h2>About Me</h2>
-    <div class="card">
-      <p>I am a researcher and aspiring PhD candidate in Behavioral Health and Epidemiology, with a focus on employment conditions, migrant health, and the intersection of AI with public health research. I joined the <em>Generative AI for Work & Research</em> course to enhance my ability to integrate no-code AI tools into research and data analysis workflows.</p>
-    </div>
-  </section>
+    /* Background gradient layers */
+    body{
+      background: radial-gradient(1200px 800px at -10% -10%, var(--rose) 0%, transparent 55%),
+                  radial-gradient(900px 700px at 110% 0%, var(--sky) 0%, transparent 60%),
+                  radial-gradient(1000px 700px at 20% 120%, var(--mint) 0%, transparent 60%),
+                  linear-gradient(180deg, var(--offwhite), #ffffff 30%, var(--rose) 120%);
+      background-attachment: fixed;
+    }
 
-  <section id="about-course">
-    <h2>About the Course</h2>
-    <div class="card">
-      <p><strong>Generative AI for Work & Research</strong> is an 8-week live cohort course by <a href="https://thegraphcourses.org" target="_blank">GRAPH Courses</a>, focused on applying no-code AI tools for task automation, data analysis, and research communication. The course features live workshops, project coaching, and a capstone showcase.</p>
-      <p>Key modules include:</p>
-      <ul>
-        <li>Websites, Documents & Presentations</li>
-        <li>AI-Automated Data Analysis</li>
-        <li>GenAI for Research & Text Analysis</li>
-        <li>Custom GPTs and Chatbots</li>
-        <li>AI for Task Automation</li>
-        <li>GenAI for Communication and Outreach</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="weekly-submissions">
-    <h2>My Weekly Submissions</h2>
-
-    <div class="card">
-      <h3>Workshop 1: Introduction to Generative AI</h3>
-      <p>Placeholder for Week 1 submission.</p>
-    </div>
-
-    <div class="card">
-      <h3>Workshop 2: Automated Data Analysis</h3>
-      <p>Analyzed Gapminder data to explore relationships between two global indicators using AI tools.</p>
-      <p><a href="https://github.com/khinoomon/graph-ai-portfolio-/blob/main/Week2report_khin.pdf" target="_blank">View Report</a></p>
-    </div>
-
-    <div class="card">
-      <h3>Workshop 3</h3>
-      <p>Placeholder for Week 3 submission.</p>
-    </div>
-
-    <div class="card">
-      <h3>Workshop 4</h3>
-      <p>Placeholder for Week 4 submission.</p>
-    </div>
-
-    <!-- More workshop submissions can be added here -->
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Khin Oo Mon. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+    header{
+      position:sticky;top:0;z-index:50; backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.6); border-bottom:1px solid rgba(31,36,48,0.06);
+    }
+    nav{display:flex; align-items:center; justify-content:space-between; gap:16px
